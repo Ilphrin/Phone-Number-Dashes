@@ -1,0 +1,15 @@
+{
+  "manifest_version":1,
+  "name":"Phone Number Dashes",
+  "description":"Add dashes in the phone number to see it more clearly",
+  "version":"1.0",
+  "author":"Kevin Pellet (Ilphrin)",
+  "content_scripts":[{
+    "matches": ["app://communications.gaiamobile.org/contacts/index.html", "app://sms.gaiamobile.org/index.html"],
+    "css":[],
+    "js": ["js/script.js"]
+  }],
+  "icons": {
+    "128": "/icons/icon-128.png"
+  }
+}
