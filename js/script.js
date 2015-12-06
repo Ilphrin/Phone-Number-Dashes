@@ -2,9 +2,21 @@
 
 function splitNumber(content) {
   var str = content.innerHTML;
+  var step = 2;
+  var offset = 0;
+
   if (content.innerHTML.length === 10) {
-    content.innerHTML = str.slice(0,2) + "-" + str.slice(2,4) + "-" + str.slice(4, 6) + "-" + str.slice(6, 8) + "-" + str.slice(8, 10);
+    offset = 0;
   }
+  else {
+    if (content.innerHTML[0] === "(") {
+      offset = 5;
+    }
+    else if (content.innerHTML[0] === "+") {
+      offset = 3;
+    }
+  }
+  content.innerHTML = str.slice(0 + offset, step + offset) + "-" + str.slice(offset + step, offset + step * 2) + "-" + str.slice(offset + step * 2, offset + step * 3) + "-" + str.slice(offset + step * 3, offset + step * 4) + "-" + str.slice(offset + step * 4, offset + step * 5);
 }
 
 
