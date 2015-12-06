@@ -4,6 +4,6 @@
   "developper": { "name": "Kevin Pellet (Ilphrin)"},
   "package_path": "extension.zip",
   "icons": {
-    "128": "/icons/icon128.png"
+    "128": "/icons/icon-128.png"
   }
 }
